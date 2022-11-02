@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven386'
+    }
+    stages {
+         
+        stage('ENV Check') {
+            steps {
+               sh 'java --version'
+            }
+        }
+    }
+  }
